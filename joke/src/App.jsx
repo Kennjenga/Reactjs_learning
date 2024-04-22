@@ -6,8 +6,10 @@ import jokeData from './components/jokeData'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-  const jokeElement = jokeData.map(joke => { return <Joke setup={joke.setup}   punchline={joke.punchline} /> })
+  const [count, setCount] = useState(jokeData)
+  
+  
+  const jokeElement = count.map(joke => { return <Joke key={joke.id} setup={joke.setup} punchline={joke.punchline} /> })
   return (
     <>
     <div className="container">{jokeElement}</div>
