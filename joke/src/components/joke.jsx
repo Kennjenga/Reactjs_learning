@@ -7,12 +7,14 @@ export default function Joke(props) {
     setIsShown(prevShown => !prevShown)
 }
   
-  return (
+  return ( 
     <div>
       {props.setup && <h3>Setup: {props.setup}</h3>}
       {isShown && <p>Punchline: {props.punchline}</p>}
-      {isShown ? <button onClick={toggle}>punch my line</button> :  <button onClick={toggle}>Reveal Punchline</button>}
+      <button onClick={toggle}>{isShown ? "Hide" : "Show"} Punchline</button>
       <hr />
     </div>
   );
 }
+
+//{isShown ? <button onClick={toggle}>punch my line Hide</button> :  <button onClick={toggle}>Reveal Punchline</button>}
