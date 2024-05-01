@@ -1,15 +1,16 @@
 import React from "react";
-import memh from "../assets/mem.png";
-import "./style.css";
+import meme_img  from '../assets/mem.png';
 
-const Header = () => {
-  return (
-    <div className="headr">
-      <img src={memh} alt="meme head" className="mem-img"/>
-      <h1 className="header-title">Meme Generator</h1>
-      <h4 className="header-project">React-Course-Project 3</h4>
-    </div>
-  );
-};
 
-export default Header;
+export default function Header() {
+    return (
+        <header className="header">
+            <img 
+                src= {meme_img}
+                className="header--image"
+            />
+            <h2 className="header--title">Meme Generator</h2>
+            <h4 className="header--project">React Course - Project 3</h4>
+        </header>
+    )
+}
